@@ -1,0 +1,23 @@
+# 二進制編譯文件 (Binary output)
+netthrottle
+netthrottle.exe
+*.bin
+*.out
+
+# 操作系統產生的雜物
+.DS_Store
+Thumbs.db
+
+# IDE 配置 (Visual Studio Code / JetBrains)
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Go 依賴與測試相關
+vendor/
+coverage.out
+profile.pprof
+
+# 臨時測試日誌
+*.log
