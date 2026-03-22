@@ -47,6 +47,17 @@ Bash
 go test ./pkg/limiter/...
 (如果看到 PASS，說明你的算法邏輯完全正確。)
 
+// token_bucket_benchmark_test
+會測試在高併發（多個 Goroutine 同時請求令牌）的情況下，你的令牌桶算法處理速度有多快。
+
+如何運行並獲取數據？！
+在終端輸入：
+
+Bash
+go test -bench=BenchmarkTokenBucket_Consume ./pkg/limiter -benchmem
+你會得到類似 ... ns/op 和 0 B/op 的數據。
+
+
 編譯成可執行文件：
 
 Bash
