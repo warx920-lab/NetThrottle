@@ -24,20 +24,17 @@ go build -o netthrottle ./cmd/netthrottle
 
 
 
-sage
+Usage
 
 Forward local port 8081 to a database on 5432, limiting speed to 128KB/s with 100ms lag:
 
-
-
 Bash
-
 ./netthrottle -l :8081 -r localhost:5432 -kb 128 -delay 100
+
 
 Testing
 
 Bash
-
 go test ./pkg/limiter/...
 
 
@@ -58,25 +55,16 @@ vendor/
 
 安裝 Go 語言（版本 1.21+）。
 
-
-
 在項目根目錄運行測試：
 
-
-
 Bash
-
 go test ./pkg/limiter/...
 
 (如果看到 PASS，說明你的算法邏輯完全正確。)
 
 
-
 編譯成可執行文件：
 
-
-
 Bash
-
 go build -o netthrottle ./cmd/netthrottle
 
